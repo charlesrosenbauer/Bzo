@@ -1,1 +1,15 @@
-Lex  #Module
+Lex    #Module
+String #Import
+Types  #Include
+
+
+
+
+
+
+
+
+
+
+wrappedLexer :: Str ;; ([:Err], [:Token])
+[txt] wrappedLexer :: []

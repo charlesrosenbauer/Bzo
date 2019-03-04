@@ -1,1 +1,15 @@
 ParseRules #Module
+String     #Import
+Types      #Include
+
+
+
+
+
+
+
+
+
+
+parserIter :: [Str, [:ParseItem], [:ParseItem]] ;; ([:Err], [:Syntax])
+[fname, front, back] parserIter :: []
