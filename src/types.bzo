@@ -9,12 +9,19 @@ String #Import
 
 
 
-Pos :: [startcol.Int, startline.Int, endcol.Int, endline.Int, file.Str]
+Pos :: [
+  startcol.Int,
+  startline.Int,
+  endcol.Int,
+  endline.Int,
+  file.Str
+]
 
 
 Syntax :: (
   S-Id  .[Pos, Str],
-  S-Int .[Pos, Int] )
+  S-Int .[Pos, Int]
+)
 
 
 ParseItem :: (Syntax, Token)
@@ -22,11 +29,13 @@ ParseItem :: (Syntax, Token)
 
 Token :: (
   T-Id  .[Pos, Str],
-  T-Int .[Pos, Int] )
+  T-Int .[Pos, Int]
+)
 
 
 Err :: (
   LexErr   .[Pos, Str],
   ParseErr .[Pos, Str],
   DepErr   .[Pos, Str],
-  TypeErr  .[Pos, Str] )
+  TypeErr  .[Pos, Str]
+)
