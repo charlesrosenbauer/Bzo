@@ -1,0 +1,60 @@
+Tokens #Module
+String #Import
+Common #Include
+
+
+
+
+Token :: (
+  'Identifiers'
+  T-Id              .[Pos, Int],
+  T-MId             .[Pos, Int],
+  T-TyId            .[Pos, Int],
+  T-Dir-Func        .[Pos, Int],
+  T-Dir-Type        .[Pos, Int],
+  T-TVar            .[Pos, Int],
+
+  'Literals'
+  T-Int             .[Pos, Int],
+  T-Flt             .[Pos, Flt],
+  T-Str             .[Pos, Str],
+  T-Tag             .[Pos, Tag],
+  T-Int-Suffix      .[Pos, Int, Str],
+  T-Flt-Suffix      .[Pos, Flt, Str],
+  T-Str-Suffix      .[Pos, Str, Str],
+  T-Tag-Suffix      .[Pos, Str, Str],
+
+  'Braces'
+  T-Start-Do        .Pos,
+  T-End-Do          .Pos,
+  T-Start-Par       .Pos,
+  T-End-Par         .Pos,
+  T-Start-Tup       .Pos,
+  T-End-Tup         .Pos,
+  T-Named-Par-Start .[Pos, Int],
+  T-Named-Par-End   .[Pos, Int],
+  T-Named-Tup-Start .[Pos, Int],
+  T-Named-Tup-End   .[Pos, Int],
+  T-Named-Do-Start  .[Pos, Int],
+  T-Named-Do-End    .[Pos, Int],
+  T-Named-Ang-Start .[Pos, Int],
+  T-Named-Ang-End   .[Pos, Int],
+
+  'Directive Lines and Strings'
+  T-Dir-Str         .[Pos, Int, Str],
+  T-Dir-Line        .[Pos, Int, Str],
+
+  'Special Characters and Symbols'
+  T-Define     .Pos,  '::'
+  T-Fun-Symbol .Pos,  ';;'
+  T-Comma      .Pos,  ','
+  T-Period     .Pos,  '.'
+  T-Colon      .Pos,  ':'
+  T-Semicolon  .Pos,  ';'
+  T-Nil-Brack  .Pos,  '[]'
+  T-Nil-Paren  .Pos,  '()'
+  T-Namespace  .Pos,  '@'
+  T-Wildcard   .Pos,  '_'
+  T-Map        .Pos,  '..'
+  T-Newline    .Pos
+)

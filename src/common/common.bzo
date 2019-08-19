@@ -1,0 +1,13 @@
+Common #Module
+String #Import
+
+
+
+
+Pos :: [
+  start-col .Int,
+  start-line.Int,
+  end-col   .Int,
+  end-line  .Int,
+  file      .Str
+]
