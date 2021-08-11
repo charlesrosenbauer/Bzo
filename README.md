@@ -1,7 +1,5 @@
 # Bzo Compiler
 
-![Bzo Logo](assets/bzologo.png)
-
 This is some code for the self-hosted version of the Bzo compiler.
 
 This version will include extra features not available in the bootstrapping

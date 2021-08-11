@@ -1,58 +1,19 @@
-Bzo    #Module
-StdIO  #Import
-String #Import
+[#module: "main"]
+[#import: "io"  ]
+[#import: "time"]
 
 
 
 
 
-
-
-
-
-print-intro :: IO ;; IO
-[~io] print-intro :: {
-  ~io [println: _, '\n88888888ba   888888888888    ,ad8888ba,   ' ] ~io
-  ~io [println: _, '88      "8b           ,88   d8"\'    `"8b  '] ~io '"'
-  ~io [println: _, '88      ,8P         ,88"   d8\'        `8b  ' ] ~io
-  ~io [println: _, '88aaaaaa8P\'       ,88"     88          88  ' ] ~io
-  ~io [println: _, '88""""""8b,     ,88"       88          88  '] ~io
-  ~io [println: _, '88      `8b   ,88"         Y8,        ,8P  ' ] ~io
-  ~io [println: _, '88      a8P  88"            Y8a.    .a8P   ' ] ~io
-  ~io [println: _, '88888888P"   888888888888    `"Y8888Y"\'\n' ] ~io
-  ~io [println: _, 'Created by Charles Rosenbauer (https://github.com/charlesrosenbauer)'] ~io
-  ~io [println: _, 'Github for Compiler: https://github.com/charlesrosenbauer/Bzo'] ~io
-  ~io [println: _, 'Note: This is a work in progress. Don\'t expect everything to work right now.'] ~io
-  ~io [println: _, 'This compiler is licensed under the MIT License'] ~io
-  ~io [println: _, 'Enter "#quit" to exit\n']
+main :: [args : []Str] -> [] {
+	prog |: Program
+	files := args \ tail
+	
+	start := [clock: _]
+	diff  |: Time
+	
+	errs  := [makeErrorList: 64]
+	
+	#: Add more later
 }
-
-
-Opt-None :: []
-Bzo-Settings :: []
-
-main :: IO ;; IO
-[~io] main :: {
-  [~io, get-args parse-parameters] (
-    printErr,
-    ;[~io, [[], [], [], Opt-None, []].Bzo-Settings]{
-      ~io print-intro ~io
-      [main-loop: [=: '#quit', _], 'Bzo>>>', _]},
-    compile-file-pass )}
-
-
-
-
-
-
-
-
-
-
-main-loop :: [[Str ;; Bl], Str, Str ;; Str, IO] ;; IO
-[endfn, prompt, action, ~io] main-loop :: {
-  [~io, prompt] print ~io
-  ~io readline [line, ~io]
-  ~io [?: line endfn,
-        id,
-        [print: _, line action]] }

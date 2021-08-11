@@ -1,0 +1,11 @@
+[#module: "main"]
+[#import: "io"  ]
+
+
+Token :: (I16:
+	0	=	TKN_VOID,
+	1	=	TKN_PERIOD,
+	2	=	TKN_COMMA,
+	3	=	TKN_SEMICOLON
+	#:  add more later
+)

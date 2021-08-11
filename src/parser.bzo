@@ -1,0 +1,13 @@
+[#module: "main"]
+[#import: "io"  ]
+
+
+
+ASTTyElem :: [
+	pos		: Position
+	arrs	: []I64
+	tyid	: I64
+	|: [#req: arrs[i] > -2]
+]
+
+
